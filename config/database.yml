@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
-  database: ripelist_development
+  database: ripelistapp_development
 
 test:
   adapter: postgresql
-  database: ripelist_test
+  database: ripelistapp_test
