@@ -1,35 +1,7 @@
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <h3>Error's present:</h3>
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <br>
-  <%= f.label 'Username*' %><br>
-  <%= f.text_field :username %><br>
+<%= render('layouts/form_new_user') %>
 
-  <%= f.label 'Email*' %><br>
-  <%= f.text_field :email %><br>
-
-  <%= f.label 'Password*' %><br>
-  <%= f.password_field :password %><br>
-
-  <%= f.label 'Confirm Password*' %><br>
-  <%= f.password_field :password_confirmation %><br>
-
-  <%= f.label 'First Name' %><br>
-  <%= f.text_field :first_name %><br>
-
-  <%= f.label 'Last Name' %><br>
-  <%= f.text_field :last_name %><br>
-
-  <%= f.submit 'Sign Up' %>
-<% end %>
 <p>* indicates a required field</p>
-Already have an account?<br>
+<p>Already have an account?</p>
 <%= link_to 'Log in', sessions_path %>
 
 

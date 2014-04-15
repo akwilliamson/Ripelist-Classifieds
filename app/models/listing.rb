@@ -6,4 +6,6 @@ class Listing < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :city
   validates_presence_of :price
+  validates_presence_of :bundle_type
+
 end
