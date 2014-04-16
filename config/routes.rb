@@ -1,8 +1,7 @@
 Ripelist::Application.routes.draw do
-  root :to => 'listings#index'
-  get 'login', to: 'sessions#index', as: 'login'
-  get 'signup', to: 'users#new', as: 'signup'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
+  root to: 'listings#index'
+  match '/sessions/user', to: 'devise/sessions#create', via: :post
 
   resources :users
   resources :listings
