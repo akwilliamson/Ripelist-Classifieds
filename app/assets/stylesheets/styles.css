@@ -1,54 +1,19 @@
 
-
-.listing-index-nav-bar {
- height: 30px;
- margin-bottom: 5px; 
- background-color: teal;
-}
-
-.listing-index-listing {
-  position: relative;
-  background-color: yellow;
-  margin: 5px;
-  clear: both;
-  float: left;
-}
-
 .listing-index-created-at {
-  height: 30px;
-  width: 50px;
-  background-color: green;
-  text-align: center;
   font-size: 10px;
-  float: left;
-  padding: 10px;
   margin-right: 15px;
-  margin-left: 15px;
 }
 
 .listing-index-image {
- float: left;
  margin-right: 15px;
 }
 
 .listing-index-name {
-  height: 30px;
-  width: 60px;
-  background-color: red;
-  text-align: center;
   font-weight: bold;
-  float: left;
-  padding: 10px;
   margin-right: 15px;
 }
 
 .listing-index-price {
-  height: 30px;
-  width: 60px;
-  background-color: pink;
-  text-align: center;
-  float: left;
-  padding: 10px;
   margin-right: 15px;
 }
 
@@ -80,5 +45,25 @@
   float: left;
   padding: 10px;
   margin-right: 15px;
+}
+
+.listing-form {
+  padding-left: 15px;
+}
+
+.listing-form-header {
+  text-align: center;
+}
+
+.form-wrapper {
+  background-color: #84A133;
+  border-radius: 8px;
+  width: 500px;
+  margin: auto;
+}
+
+.listing-text-area {
+  width: 400px;
+  height: 100px;
 }
 

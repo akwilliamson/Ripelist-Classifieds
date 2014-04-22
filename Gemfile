@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'email_validator'
 gem 'devise'
+gem 'dimensions-rails'
 
 
 group :development do
