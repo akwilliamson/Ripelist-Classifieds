@@ -1,4 +1,89 @@
 <br>
-<% @listings.each do |listing| %>
-	<%= listing.name %><br>
+<div class='listing-index-nav-bar'>
+
+</div>
+<div class='listing-display'>
+	<% @listings.each do |listing| %>
+		<% if listing.photo1_file_name.nil? && listing.photo2_file_name.nil? %>
+			
+			<div class='listing-index-listing'>	
+				<div class='listing-index-created-at'>
+					<%= time_ago_in_words(listing.created_at) %> ago
+				</div>
+				<div class='listing-index-name'>
+					<%= listing.name %>
+				</div>
+				<div class='listing-index-price'>
+					<%= number_to_currency(listing.price) %>
+					<%= listing.bundle_type %>
+				</div>
+				<div class='listing-index-sale'>
+					<%= listing.for_sale %>
+				</div>
+				<div class='listing-index-trade'>
+					<%= listing.for_trade %>
+				</div>
+				<div class='listing-index-donate'>
+					<%= listing.for_donation %>	
+				</div>
+				<hr>
+			</div>
+
+		<% elsif listing.photo1_file_name.nil? %>
+			<div class='listing-index-listing'>			
+				<div class='listing-index-created-at'>
+					<%= time_ago_in_words(listing.created_at) %> ago
+				</div>
+				<div class='listing-index-image'>
+					<%= image_tag listing.photo2.url(:thumb) %> 
+				</div>
+				<div class='listing-index-name'>
+					<%= listing.name %>
+				</div>
+				<div class='listing-index-price'>
+					<%= number_to_currency(listing.price) %>
+					<%= listing.bundle_type %>
+				</div>
+				<div class='listing-index-sale'>
+					<%= listing.for_sale %>
+				</div>
+				<div class='listing-index-trade'>
+					<%= listing.for_trade %>
+				</div>
+				<div class='listing-index-donate'>
+					<%= listing.for_donation %>	
+				</div>
+				<hr>
+      </div>
+
+		<% else %>
+			<div class='listing-index-listing'>	
+				<div class='listing-index-created-at'>
+					<%= time_ago_in_words(listing.created_at) %> ago
+				</div>
+				<div class='listing-index-image'>
+					<%= image_tag listing.photo1.url(:thumb) %> 
+				</div>
+				<div class='listing-index-name'>
+					<%= listing.name %>
+				</div>
+				<div class='listing-index-price'>
+					<%= number_to_currency(listing.price) %>
+					<%= listing.bundle_type %>
+				</div>
+				<div class='listing-index-sale'>
+					<%= listing.for_sale %>
+				</div>
+				<div class='listing-index-trade'>
+					<%= listing.for_trade %>
+				</div>
+				<div class='listing-index-donate'>
+					<%= listing.for_donation %>	
+				</div>
+				<hr>
+			</div>
+
+		<% end %>
+</div>
 <% end %>
+					<span class="glyphicon glyphicon-cloud"></span>

@@ -1,67 +1,84 @@
-@charset 'UTF-8';
-/* Starter CSS for Flyout Menu */
-#rlmenu,
-#rlmenu ul,
-#rlmenu li #rlmenu a {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 14px;
-  font-family: Helvetica;
-  line-height: 1;
+
+
+.listing-index-nav-bar {
+ height: 30px;
+ margin-bottom: 5px; 
+ background-color: teal;
 }
-#rlmenu {
-  width: auto;
-}
-#rlmenu ul {
-  zoom: 1;
-  background: #a7bc7a url(pattern.png) top left repeat;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #839b4e;
-  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-}
-#rlmenu ul:before {
-  content: '';
-  display: block;
-}
-#rlmenu ul:after {
-  content: '';
-  display: table;
+
+.listing-index-listing {
+  position: relative;
+  background-color: yellow;
+  margin: 5px;
   clear: both;
-}
-#rlmenu a,
-#rlmenu a:link,
-#rlmenu a:visited {
-  padding: 15px 20px;
-  display: block;
-  text-decoration: none;
-  color: #ffffff;
-  text-shadow: 0 -1px 1px #586835;
-  border-right: 1px solid #839b4e;
-}
-#rlmenu a:hover {
-  color: #586835;
-  text-shadow: 0 1px 1px #bdcd9c;
-}
-#rlmenu li {
   float: left;
-  border-right: 1px solid #b2c58b;
 }
-#rlmenu li:hover {
-  background: #9cb369 url(pattern.png) top left repeat;
+
+.listing-index-created-at {
+  height: 30px;
+  width: 50px;
+  background-color: green;
+  text-align: center;
+  font-size: 10px;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
-#rlmenu li:first-child {
-  border-left: none;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
+
+.listing-index-image {
+ float: left;
+ margin-right: 15px;
 }
-.rllogo {
-  width: 30px;
-  height: 10px;
+
+.listing-index-name {
+  height: 30px;
+  width: 60px;
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
 }
+
+.listing-index-price {
+  height: 30px;
+  width: 60px;
+  background-color: pink;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.listing-index-sale {
+  height: 30px;
+  width: 50px;
+  background-color: orange;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.listing-index-trade {
+  height: 30px;
+  width: 50px;
+  background-color: purple;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.listing-index-donate {
+  height: 30px;
+  width: 50px;
+  background-color: brown;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  margin-right: 15px;
+}
+
