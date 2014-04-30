@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
 
 
   def index
-    @listings = Listing.all.reverse
+    @listings = Listing.search(params[:search])
   end
 
   def show
@@ -16,6 +16,7 @@ class ListingsController < ApplicationController
   def create
   	@listing = Listing.new(listing_params)
   	if @listing.save
+      current_user.listings << @listing
   		flash[:notice] = 'posted successfully'
   		redirect_to root_url
   	else

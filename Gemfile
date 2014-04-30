@@ -14,7 +14,7 @@ gem 'bootstrap-sass-extras'
 gem 'email_validator'
 gem 'devise'
 gem 'dimensions-rails'
-gem 'unicorn'
+gem 'pry'
 
 group :development do
   gem 'better_errors'

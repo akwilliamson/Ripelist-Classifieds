@@ -11,17 +11,9 @@
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <%= link_to(image_tag('ripelistLogoSmall.png', :class =>"navbar-brand", :id => "navbar-brand"), "/") %>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       <% if user_signed_in? %>
@@ -30,12 +22,14 @@
         <li><%= link_to 'Post', new_user_session_path %></li>
       <% end %>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <div class="form-wrapper">
+        <%= form_tag listings_path, :method => 'get', :class => "navbar-form navbar-left" do %>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <%= text_field_tag :search, params[:search], :class => "form-control col-lg-8", :id => "search" %>
+          <%= submit_tag "Search", :name => nil, :class => "btn btn-success btn-md" %>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+        <% end %>
+      </div>  
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %> 
         <li><%= link_to current_user.email, user_path(current_user.id) %></li>
@@ -49,9 +43,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div class="flash-message">
 <% flash.each do |name, message| %>
-  <br><%= message %>
+  <%= message %>
 <% end %>
+</div>
+
 <%= yield %>
 
 </body>

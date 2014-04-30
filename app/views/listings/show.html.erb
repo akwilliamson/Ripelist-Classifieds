@@ -1,2 +1,13 @@
-<h3><%= @listing.name %></h3><br>
-<%= @listing.description %>
+<div class="container">
+	<h3><%= @listing.name %></h3><span class="listing-item">Posted <%= time_ago_in_words(@listing.created_at).gsub('about','') %> ago</span><br><br>
+
+	<% if @listing.photo1.present? %>
+		<span class="listing-index-image"><%= image_tag @listing.photo1.url(:large) %></span>
+	<% end %>
+	<% if @listing.photo2.present? %>
+		<span class="listing-index-image"><%= image_tag @listing.photo2.url(:large) %></span>
+	<% end %><br><br>
+
+
+	<%= @listing.description %>
+</div>
