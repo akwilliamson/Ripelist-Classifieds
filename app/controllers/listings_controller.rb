@@ -2,7 +2,12 @@ class ListingsController < ApplicationController
 
 
   def index
-    @listings = Listing.search(params[:search])
+    @listings_search = Listing.search(params[:search])
+    @listings = @listings_search.reverse
+  end
+
+  def edit
+    @listing = Listing.find(params[:id])
   end
 
   def show
@@ -21,7 +26,7 @@ class ListingsController < ApplicationController
   		redirect_to root_url
   	else
   		render 'new'
-  	end 
+  	end
   end
 
 private

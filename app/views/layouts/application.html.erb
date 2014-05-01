@@ -26,17 +26,17 @@
         <%= form_tag listings_path, :method => 'get', :class => "navbar-form navbar-left" do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], :class => "form-control col-lg-8", :id => "search" %>
-          <%= submit_tag "Search", :name => nil, :class => "btn btn-success btn-md" %>
+          <%= submit_tag "Search", :name => nil, :class => "btn btn-success btn-md", :id => "search-button" %>
         </div>
         <% end %>
-      </div>  
+      </div>
       <ul class="nav navbar-nav navbar-right">
-      <% if user_signed_in? %> 
+      <% if user_signed_in? %>
         <li><%= link_to current_user.email, user_path(current_user.id) %></li>
         <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to 'Log in', new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %></li>        
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

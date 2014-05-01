@@ -1,3 +1,4 @@
+<br>
 <% @listings.each do |listing| %>
 <ul class="list-group">
 	<li class="list-group-item">
@@ -8,7 +9,9 @@
 			<span><%= image_tag listing.photo2.url(:thumb) %></span>
 		<% end %>
 		<%= link_to listing.name, listing_path(listing.id), :class => "listing-index-name" %>
-		<span class="listing-index-price"><%= number_to_currency(listing.price) %>/<%= listing.bundle_type %></span>
+		<% if listing.price %>
+			<span class="listing-index-price"><%= number_to_currency(listing.price) %>/<%= listing.bundle_type %></span>
+		<% end %>
 		<% if listing.for_sale %>
 			<span class="glyphicon glyphicon-ok" id="span-stack">Sale</span>
 		<% end %>

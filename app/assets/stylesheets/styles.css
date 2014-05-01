@@ -3,6 +3,10 @@
   height: 55px;
 }
 
+#search-button {
+  margin-left: 10px;
+}
+
 .flash-message {
   background-color: #8fc800;
   color: white;
