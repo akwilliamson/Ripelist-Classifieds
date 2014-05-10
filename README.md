@@ -4,7 +4,6 @@
 **A classifieds application where people can sell, trade, or donate their backyard produce.**
 
 As a basic user, I want to post a listing of my homegrown food.
-  
 *photos not uploading*
 *categories not listed*
 
