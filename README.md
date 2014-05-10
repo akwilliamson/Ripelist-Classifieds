@@ -5,10 +5,6 @@
 
 As a basic user, I want to post a listing of my homegrown food.
 
-*photos not uploading*
-
-*categories not listed*
-
 As a basic user I want to be able to edit or delete a live listing that I previously added.
 
 As a basic user, I want my listing to contain a title, description, price, type of sale and the ability to upload photos.
