@@ -1,11 +1,17 @@
 <div class="container">
 	<h3>Account details</h3><hr>
-
 	<div class="active-posts">
 		<h4>Your active posts:</h4>
-		<% @user.listings.each do |listing| %>
-			<h4><%= link_to listing.name, listing_path(listing), :class => "listing-index-name" %></h4>
-		<% end %>
+		<ul class="list-inline">
+			<% @user.listings.each do |listing| %>
+				<li>
+					<h4><%= link_to listing.name, listing_path(listing), :class => "listing-index-name" %></h4>
+				</li>
+				<li>
+					<button class="btn btn-warning btn-sm"><%= link_to "Edit", edit_user_listing_path(@user.id, listing.id), :class => "listing-edit-link" %></button>
+				</li>
+			<% end %>
+		</ul>
 	</div>
 
 	<%= button_to 'Delete account', user_registration_path, :confirm => 'Are you sure you want to delete your account?', :method => :delete, :class => "btn btn-danger btn-sm" %>

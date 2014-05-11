@@ -106,3 +106,13 @@
   height: 100px;
 }
 
+.listing-edit-link {
+  text-decoration: none;
+  color: white;
+}
+
+.listing-edit-link:hover {
+  text-decoration: none;
+  color: white;
+}
+

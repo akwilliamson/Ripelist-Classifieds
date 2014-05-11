@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = current_user.listings.find(params[:id])
   end
 
   def new

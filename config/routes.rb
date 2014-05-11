@@ -9,7 +9,9 @@ Ripelist::Application.routes.draw do
     match '/sessions/user', to: 'devise/sessions#create', via: :post
 	end
 
-  resources :users
+  resources :users do
+    resources :listings
+  end
   resources :listings
   resources :categories
   resources :sessions
