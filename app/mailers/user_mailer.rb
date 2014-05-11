@@ -6,9 +6,9 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.signup_confirmation.subject
   #
-  def welcome_email(user)
+  def signup_confirmation(user)
     @user = user
-    @url = 'localhost:3000/login'
-    mail to: @user.email, subject: 'Welcome to Ripelist!'
+    @url = 
+    mail to: @user.email, subject: 'Sign Up Confirmation'
   end
 end
