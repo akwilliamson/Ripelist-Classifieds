@@ -1,9 +1,8 @@
 <div class="container">
-	<h2><%= @user.email %></h2>
-	<h2>Account details</h2><hr>
+	<h3>Account details</h3><hr>
 
 	<div class="active-posts">
-		<h3>Your active posts:</h3>
+		<h4>Your active posts:</h4>
 		<% @user.listings.each do |listing| %>
 			<h4><%= link_to listing.name, listing_path(listing), :class => "listing-index-name" %></h4>
 		<% end %>
