@@ -22,11 +22,19 @@ class ListingsController < ApplicationController
   	@listing = Listing.new(listing_params)
   	if @listing.save
       current_user.listings << @listing
-  		flash[:notice] = 'posted successfully'
+  		flash[:notice] = "Posted successfully"
   		redirect_to root_url
   	else
-  		render 'new'
+  		render "new"
   	end
+  end
+
+  def destroy
+    @user = current_user
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    flash[:notice] = "Listing deleted"
+    redirect_to user_path(@user)
   end
 
 private

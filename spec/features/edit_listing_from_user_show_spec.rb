@@ -5,7 +5,7 @@ describe "edit user's listings" do
 		log_in_user
 		create_user_listing
 		click_link @email
-		click_link "Edit"
+		click_button "Edit"
 		page.should have_content("apples")
 	end
 end
