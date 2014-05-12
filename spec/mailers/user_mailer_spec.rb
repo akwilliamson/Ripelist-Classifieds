@@ -15,5 +15,10 @@ describe UserMailer do
       mail.body.encoded.should have_content("The Ripelist team")
     end
   end
-
+  describe "user emails" do
+    it "sends a confirmation email upon sign up" do
+      user = FactoryGirl.create(:user)
+      ActionMailer::Base.deliveries.last.to.should eq [user.email]
+    end
+  end
 end
